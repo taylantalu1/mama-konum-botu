@@ -1,6 +1,7 @@
-aiogram==3.3.0
-aiohttp==3.9.3
-aiofiles==23.2.1
+aiogram==3.1.0
+aiohttp==3.8.5
+aiofiles==23.1.0
 flask
 requests
 gunicorn
+pydantic<2.0  # Rust derleme gerektirmez
