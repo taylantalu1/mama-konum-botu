@@ -1,14 +1,11 @@
-import os
 import asyncio
 from aiogram import Bot, Dispatcher, types
+from config import BOT_TOKEN  # config.py’den alıyoruz
 
-# BOT TOKEN'ını environment variable'dan al
-API_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN config.py dosyasında ayarlanmamış!")
 
-if not API_TOKEN:
-    raise ValueError("BOT_TOKEN environment variable is not set!")
-
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 @dp.message()
