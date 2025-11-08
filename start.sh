@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-# virtual environment aktifleştir
-source .venv/bin/activate
-
-# botu başlat
+#!/bin/bash
+# Render üzerinde virtualenv otomatik kuruluyor, sadece çalıştır
 python main.py
+
